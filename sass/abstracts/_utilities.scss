@@ -1,0 +1,109 @@
+@use 'variables' as var;
+
+// Utility Classes
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var.$transition-speed;
+    width: 100%;
+    margin-bottom: 0.8rem;
+
+    &.primary-btn {
+        background: var.$primary-color;
+        color: var.$text-light;
+
+        &:hover {
+            background: darken(var.$primary-color, 5%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(var.$primary-color, 0.3);
+        }
+    }
+
+    &.secondary-btn {
+        background: transparent;
+        border: 1px solid var.$primary-color;
+        color: var.$text-light;
+
+        &:hover {
+            background: rgba(var.$primary-color, 0.1);
+        }
+    }
+
+    &.edit-btn {
+        background: var.$primary-color;
+        color: var.$text-light;
+
+        &:hover {
+            background: darken(var.$primary-color, 5%);
+        }
+    }
+
+    &.delete-btn {
+        background: #ff7675;
+        color: var.$text-light;
+
+        &:hover {
+            background: darken(#ff7675, 10%);
+        }
+    }
+}
+
+// Notification system
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    max-width: 450px;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &.success {
+        background-color: rgba(46, 213, 115, 0.95);
+        color: white;
+    }
+
+    &.error {
+        background-color: rgba(255, 71, 87, 0.95);
+        color: white;
+    }
+
+    &.info {
+        background-color: rgba(54, 162, 235, 0.95);
+        color: white;
+    }
+
+    &.warning {
+        background-color: rgba(255, 159, 67, 0.95);
+        color: white;
+    }
+
+    .notification-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
