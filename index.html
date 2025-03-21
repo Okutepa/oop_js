@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="header-top">
+                <div class="logo">Task Manager</div>
+                <div class="nav-items">
+                    <a href="#" class="nav-item active">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>My Tasks</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Documents</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Team</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add Statistics Section Here -->
+            <div class="stat-container">
+                <h2>Dashboard Statistics</h2>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Tasks</h3>
+                        <p id="total-tasks">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Tasks In Progress</h3>
+                        <p id="tasks-in-progress">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Tasks Completed</h3>
+                        <p id="tasks-completed">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Projects</h3>
+                        <p id="total-projects">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="sign-out">
+                <i class="fas fa-sign-out-alt"></i>
+                Sign out
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <div style="display: flex; align-items: center;">
+                    <button class="hamburger" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="greeting">Wahguan, Crody!</div>
+                </div>
+                <div class="user">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search Tasks">
+                    </div>
+                    <div class="user-profile">
+                        <span>John Doe</span>
+                        <div class="user-avatar">JD</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Cards -->
+            <div class="cards-container">
+                <!-- Add Task Button and Tasks will be dynamically added here -->
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Last Projects</div>
+                    <div class="section-subtitle">View All Your Projects</div>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All Content</button>
+                    <button class="filter-btn">Oldest First</button>
+                </div>
+            </div>
+
+            <div class="projects-container">
+                <!-- Projects will be dynamically added here -->
+            </div>
+
+            <!-- Add Task Modal -->
+            <div class="task-modal" id="task-modal" style="display: none;">
+                <div class="modal-content">
+                    <h3>Add New Task</h3>
+                    <input type="text" id="new-task-title" placeholder="Task Title">
+                    <button id="submit-task">Add Task</button>
+                    <button id="cancel-task">Cancel</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FontAwesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
