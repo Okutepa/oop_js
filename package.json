@@ -1,0 +1,27 @@
+{
+  "name": "oop_js",
+  "version": "1.0.0",
+  "description": "A simple OOP-based task management dashboard",
+  "main": "index.js",
+  "scripts": {
+  "start": "parcel index.html",
+  "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Okutepa/oop_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Okutepa/oop_js/issues"
+  },
+  "homepage": "https://github.com/Okutepa/oop_js#readme",
+  "devDependencies": {
+    "parcel": "^2.14.1"
+  },
+  "dependencies": {
+    "gsap": "^3.12.7"
+  }
+}
